@@ -1,0 +1,26 @@
+.auth-form-header {
+  color: white;
+  text-shadow: 2px 2px 3px gray;
+  margin-bottom: 1.2rem;
+}
+
+.auth-form-wrapper {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px 1px rgb(157, 157, 157);
+}
+
+.auth-form label {
+  font-weight: bold;
+}
+
+.auth-form input {
+  margin-bottom: 1rem;
+  width: clamp(20vw, 35rem, 80vw);
+}
+
+.auth-form button {
+  width: 100%;
+  margin-bottom: 1rem;
+}

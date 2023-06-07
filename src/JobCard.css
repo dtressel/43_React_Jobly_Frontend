@@ -1,0 +1,29 @@
+.JobCard {
+  margin: 1rem 0;
+  background-color: white;
+  padding: 1rem;
+}
+
+.JobCard-content {
+  display: grid;
+  grid-template-columns: 7fr 1fr;
+}
+
+.JobCard-content-left {
+  grid-column: 1 / 2;
+}
+
+.JobCard-content-right {
+  grid-column: 2 / 3;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+
+.JobCard-content-right > button {
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  width: 5rem;
+  height: 2.5rem;
+}

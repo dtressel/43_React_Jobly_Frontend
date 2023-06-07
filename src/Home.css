@@ -1,0 +1,21 @@
+.Home {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.Home h1, .Home h2 {
+  color: white;
+  text-shadow: 2px 2px 3px rgb(70, 70, 70);
+  margin: 0 0 1.5rem;
+}
+
+.Home button {
+  margin: 0 0.5rem 0.5rem;
+  text-shadow: 2px 2px 3px rgb(70, 70, 70);
+  font-weight: bold;
+}
+
+.Home-content-wrapper {
+  text-align: center;
+}
