@@ -6,7 +6,7 @@ import './LoginSignup.css';
 
 const Profile = ({ validatePassword, updateUser }) => {
   const user = useContext(UserContext);
-  const [formData, handleChange, resetForm] = useFields({
+  const [formData, handleChange, resetForm, resetPasswordField] = useFields({
     username: '',
     firstName: user.firstName,
     lastName: user.lastName,
@@ -22,7 +22,6 @@ const Profile = ({ validatePassword, updateUser }) => {
     }
     else {
       alertElement = <Alert>{alertMessage.message}</Alert>
-      resetForm();
     }
   }
 
@@ -35,6 +34,7 @@ const Profile = ({ validatePassword, updateUser }) => {
                                          email: formData.email });
       if (results.updated) {
         setAlertMessage({ message: results.message, type: null });
+        resetPasswordField();
       }
       else {
         setAlertMessage({ message: results.message, type: "danger" });

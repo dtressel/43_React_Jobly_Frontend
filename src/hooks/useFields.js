@@ -14,7 +14,15 @@ const useFields = (initialState) => {
   const resetFormData = () => {
     setFormData(initialState);
   }
-  return [formData, handleChange, resetFormData];
+  const resetPasswordField = () => {
+    setFormData((formData) => (
+      {
+        ...formData,
+        password: ''
+      }
+    ))
+  }
+  return [formData, handleChange, resetFormData, resetPasswordField];
 }
 
 export default useFields;
