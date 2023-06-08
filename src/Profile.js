@@ -15,15 +15,15 @@ const Profile = ({ validatePassword, updateUser }) => {
   })
   const [alertMessage, setAlertMessage] = useState();
 
-  let alertElement;
+  let alertElement = null;
   if (alertMessage) {
     if (alertMessage.type) {
       alertElement = <Alert color={alertMessage.type}>{alertMessage.message}</Alert>
     }
     else {
-      
+      alertElement = <Alert>{alertMessage.message}</Alert>
+      resetForm();
     }
-
   }
 
   const handleSubmit = async evt => {
@@ -35,7 +35,6 @@ const Profile = ({ validatePassword, updateUser }) => {
                                          email: formData.email });
       if (results.updated) {
         setAlertMessage({ message: results.message, type: null });
-        resetForm();
       }
       else {
         setAlertMessage({ message: results.message, type: "danger" });
